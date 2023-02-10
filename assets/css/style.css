@@ -30,6 +30,10 @@
   box-sizing: border-box;
 }
 
+body {
+  max-width: 100%;
+}
+
 li {
   list-style: none;
 }
@@ -201,16 +205,23 @@ section .socialLinks .btn {
 
 section .TwoColumns .first {
   grid-area: first;
+  width: 100%;
+  padding-left: 50px;
+  max-width: none;
 }
 
 section .TwoColumns .last {
   grid-area: last;
+  width: 100%;
+  padding-right: 50px;
+  max-width: none;
 }
 
 section .TwoColumns {
   display: grid;
   grid-template-areas: "last first";
   grid-template-columns: repeat(2, 1fr);
+  align-items: center;
   margin: 0 auto;
   max-width: 900px;
 }
@@ -227,6 +238,7 @@ section .TwoColumns .last .title {
   line-height: 1;
   margin-bottom: 20px;
   margin-top: 0;
+  white-space: nowrap;
 }
 
 section .TwoColumns .tagline {
@@ -270,7 +282,7 @@ section .TwoColumns .last .buttons .actionButton {
 
 .NativeApps {
   overflow: hidden;
-  max-height: 400px;
+  max-height: 462px;
 }
 
 .NativeApps .reverse {
@@ -292,8 +304,115 @@ section .TwoColumns .last .buttons .actionButton {
   height: 520px;
 }
 
+.NativeCode {
+  padding-top: 50px;
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
 .NativeCode .TwoColumns .last img {
   max-width: 100%;
   width: 420px;
   height: 520px;
+}
+
+.NativeCode .reverse {
+  grid-template-areas: "first last";
+}
+
+code {
+  background-color: rgba(0, 0, 0, 0.06);
+  border: 0.1rem solid rgba(0, 0, 0, 0.1);
+  border-radius: 3px;
+  font-family: "Monaco";
+  font-size: 90%;
+  padding: 0.1rem 01rem;
+}
+
+.NativeDevelopment {
+  overflow-y: hidden;
+  padding: 50px 0px;
+  max-height: 400px;
+  height: 420px;
+}
+
+.NativeDevelopment .reverse {
+  grid-template-areas: "last first";
+}
+
+.NativeDevelopment .TwoColumns .first {
+  padding-left: 50px;
+}
+
+.NativeDevelopment .TwoColumns .last {
+  padding-right: 50px;
+}
+
+.NativeDevelopment .TwoColumns .last .dissection {
+  margin-top: -50px;
+  position: relative;
+}
+
+.NativeDevelopment .TwoColumns .last .dissection img {
+  left: 0;
+  top: 0;
+  position: absolute;
+  max-width: 100%;
+}
+
+.CrossPlatform {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.CrossPlatform .reverse {
+  grid-template-areas: "first last";
+}
+
+.CrossPlatform .TwoColumns .first {
+  padding-right: 50px;
+}
+
+.CrossPlatform .TwoColumns .last {
+  padding-left: 50px;
+}
+
+.CrossPlatform .TwoColumns .last img {
+  max-width: 100%;
+  width: 400px;
+  height: 365px;
+}
+
+h2 {
+  color: #1c1e21;
+  font-size: 25px;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 20px;
+  margin-top: 0;
+}
+
+video {
+  object-fit: contain;
+  overflow-clip-margin: content-box;
+  overflow: clip;
+  height: 350px;
+}
+
+.VideoContent {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.VideoContent .reverse {
+  grid-template-areas: "first last";
+}
+
+.VideoContent .TwoColumns .first {
+  padding-right: 50px;
+}
+
+.VideoContent .TwoColumns .last {
+  padding-left: 50px;
+}
+
+.VideoContent .TwoColumns .heading {
+  white-space: nowrap;
 }
