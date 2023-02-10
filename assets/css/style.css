@@ -28,9 +28,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  /* font-family: "Cedarville Cursive", cursive; */
   font-family: "Optimistic Display", serif;
-  /* font-family: "Roboto Slab", serif; */
 }
 
 body {
@@ -133,6 +131,14 @@ nav ul li .navbar__item {
   display: inline-block;
   padding: var(--navbar-item-padding-vertical)
     var(--navbar-item-padding-horizontal);
+}
+
+@media screen and (max-width: 500px) {
+  header .announcementBar .announcementBarContent {
+    font-size: 15px;
+    line-height: 22px;
+    padding: 6px 30px;
+  }
 }
 
 /* navbar End */
