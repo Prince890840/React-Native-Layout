@@ -69,6 +69,88 @@ nav.navbar {
   padding: calc(1rem * 0.5) 16px;
 }
 
+.navbar .navbar-github-link {
+  background-image: url(/assets/Images/icons8-github-30.svg);
+  background-position: 50%;
+  background-repeat: no-repeat;
+  content: "";
+  display: flex;
+  height: 24px;
+  transition: opacity 0.2s;
+  width: 24px;
+}
+
+.navbar .DocSearch-Button {
+  border-radius: 0.4rem;
+  font-family: "Optimistic Display", system-ui, -apple-system, sans-serif;
+  padding: 0 6px 0 10px;
+}
+
+.DocSearch-Button {
+  margin: 0;
+  transition: all 0 cubic-bezier(0.08, 0.52, 0.52, 1);
+}
+
+.DocSearch-Button {
+  background: #ebedf0;
+  border: 0;
+  border-radius: 40px;
+  color: #969faf;
+  cursor: pointer;
+  font-weight: 500;
+  height: 36px;
+  justify-content: space-between;
+  padding: 0 8px;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+.DocSearch-Button,
+.DocSearch-Button-Container {
+  align-items: center;
+  display: flex;
+  box-sizing: border-box;
+}
+
+.DocSearch-Button-Keys {
+  display: flex;
+  min-width: calc(40px + 0.8em);
+}
+
+.navbar .DocSearch-Button-Key {
+  padding-bottom: 0 !important;
+  align-items: center;
+  background: linear-gradient(-225deg, #d5dbe4, #f8f8f8);
+  border: 0;
+  border-radius: 3px;
+  box-shadow: inset 0 -2px 0 0 #cdcde6, inset 0 0 1px 1px #fff,
+    0 1px 2px 1px rgba(30, 35, 90, 0.4);
+  color: #969faf;
+  display: flex;
+  height: 18px;
+  justify-content: center;
+  margin-right: 0.4em;
+  padding: 0 0 2px;
+  position: relative;
+  top: -1px;
+  width: 20px;
+}
+
+.navbar .DocSearch-Button-Key img {
+  margin-bottom: 1px !important;
+}
+
+.navbar .DocSearch-Button-Key,
+.navbar .DocSearch-Button-Placeholder {
+  font-size: 14px !important;
+  padding: 0 12px 0 6px;
+}
+
+.navbar .searchBox {
+  padding-left: 14px;
+  /* padding: 0.25rem 16px; */
+}
+
 nav .navbar__inner {
   padding: 8.5px 16px;
   margin: 0 auto;
@@ -333,7 +415,7 @@ section .NativeCodeTwoColumns::-webkit-scrollbar {
 
 .NativeCode .NativeCodeTwoColumns .first {
   padding-right: 50px;
-  margin-left: 50%;
+  margin-left: 45%;
 }
 
 .NativeCode .NativeCodeTwoColumns .last {
@@ -464,8 +546,18 @@ video {
   min-height: 325px;
 }
 
-.Community h2 {
-  text-align: center;
+.Community .content {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  max-width: 900px;
+}
+
+.Community .content .first-paragraph img {
+  float: left;
+  height: 56px;
+  margin-right: 20px;
+  width: 56px;
 }
 
 .Community .reverse {
@@ -487,6 +579,9 @@ video {
 
 .Community .first {
   border-right: 1px solid gray;
+  padding-bottom: 200px;
+  grid-area: first;
+  width: 100%;
   padding-right: 50px;
 }
 
@@ -494,7 +589,12 @@ video {
   padding-left: 50px;
 }
 
+.Community .last p {
+  margin-bottom: 22px;
+}
+
 .Community .last .AppList {
+  margin-top: 22px;
   display: grid;
   grid-gap: 16px;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
