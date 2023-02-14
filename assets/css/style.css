@@ -69,15 +69,22 @@ nav.navbar {
   padding: calc(1rem * 0.5) 16px;
 }
 
-.navbar .navbar-github-link {
+.navbar #navbar-github-link::after {
   background-image: url(/assets/Images/icons8-github-30.svg);
   background-position: 50%;
   background-repeat: no-repeat;
   content: "";
-  display: flex;
   height: 24px;
   transition: opacity 0.2s;
   width: 24px;
+  display: flex;
+  padding: 0.25rem 18px;
+  text-decoration: none;
+  user-select: none;
+  font-weight: var(--font-weight-400);
+  font-size: 17px;
+  color: var(--white);
+  -webkit-user-select: none;
 }
 
 .navbar .DocSearch-Button {
@@ -127,13 +134,14 @@ nav.navbar {
     0 1px 2px 1px rgba(30, 35, 90, 0.4);
   color: #969faf;
   display: flex;
-  height: 18px;
+  height: 20px;
   justify-content: center;
   margin-right: 0.4em;
   padding: 0 0 2px;
   position: relative;
   top: -1px;
-  width: 20px;
+  width: 25px;
+  /* text-transform: uppercase; */
 }
 
 .navbar .DocSearch-Button-Key img {
@@ -143,7 +151,7 @@ nav.navbar {
 .navbar .DocSearch-Button-Key,
 .navbar .DocSearch-Button-Placeholder {
   font-size: 14px !important;
-  padding: 0 12px 0 6px;
+  padding: 1px 8px 0 6px;
 }
 
 .navbar .searchBox {
@@ -152,7 +160,7 @@ nav.navbar {
 }
 
 nav .navbar__inner {
-  padding: 8.5px 16px;
+  /* padding: 8.5px 16px; */
   margin: 0 auto;
   max-width: 1360px;
   display: flex;
@@ -195,8 +203,8 @@ nav ul {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
-  gap: 10px;
   list-style: none;
+  justify-content: flex-end;
   margin: 0;
 }
 
@@ -209,15 +217,48 @@ nav ul li a {
   -webkit-user-select: none;
 }
 
+nav ul li select {
+  background: none;
+  border: none;
+  display: inline-block;
+  /* padding: 0.25rem 18px; */
+  text-decoration: none;
+  user-select: none;
+  font-weight: var(--font-weight-400);
+  font-size: 17px;
+  color: var(--white);
+  -webkit-user-select: none;
+  cursor: pointer;
+}
+
 nav ul li .navbar__item {
   display: inline-block;
-  padding: var(--navbar-item-padding-vertical)
-    var(--navbar-item-padding-horizontal);
+  padding: 0.25rem 18px;
+}
+
+.navbar .toggel {
+  height: 2rem;
+  width: 2rem;
+}
+
+.navbar .toggle .toggle-image {
+  align-items: center;
+  border-radius: 50%;
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  transition: background var(--ifm-transition-fast);
+  width: 100%;
 }
 
 nav.mobile-nav,
 .mobile-navbar-container {
   display: none;
+}
+
+nav ul li a:hover,
+nav ul li select:hover {
+  color: #06bcee;
 }
 
 /* navbar End */
@@ -243,6 +284,10 @@ section.dark {
   background-color: var(--section-dark);
 }
 
+section .HeaderHero {
+  padding: 50px 0px;
+}
+
 section .socialLinks {
   display: flex;
   justify-content: flex-end;
@@ -251,18 +296,28 @@ section .socialLinks {
 }
 
 section .socialLinks .twitter-follow-button {
-  background-color: #1b95e0;
+  background-color: #03a9f4;
   border-radius: 4px;
   box-sizing: border-box;
   color: var(--white);
   cursor: pointer;
-  display: inline-block;
+  display: flex;
+  align-items: center;
   font-size: 13px;
   font-weight: 400;
   height: 28px;
   line-height: 26px;
-  padding: 1px 10px 1px 9px;
+  padding: 6px 10px 2px 5px;
   margin-right: 1rem;
+  max-width: 190px;
+  white-space: nowrap;
+}
+
+.twitter-follow-button img {
+  height: 100%;
+  margin-right: 4px;
+  width: 100%;
+  object-fit: none;
 }
 
 section .socialLinks .btn {
@@ -271,7 +326,7 @@ section .socialLinks .btn {
   border-color: #ccd1d5;
   border-color: rgba(27, 31, 36, 0.15);
   white-space: nowrap;
-  padding: 1px 10px 1px 9px;
+  padding: 5px 10px 1px 9px;
   cursor: pointer;
   display: inline-block;
   font-size: 13px;
@@ -280,6 +335,19 @@ section .socialLinks .btn {
   line-height: 26px;
   border-radius: 4px;
   box-sizing: border-box;
+  white-space: nowrap;
+}
+
+.btn img {
+  height: 100%;
+  margin-right: 4px;
+  object-fit: contain;
+  max-width: 50px;
+}
+
+.btn span {
+  position: relative;
+  bottom: 6px;
 }
 
 section .TwoColumns {
@@ -337,7 +405,7 @@ section .TwoColumns .last .buttons {
   font-size: 1.25rem;
   font-weight: 400;
   max-width: 50%;
-  padding: 0.75rem 1.5rem;
+  padding: 12.75px 25.5px;
   text-align: center;
   text-decoration: none !important;
   transition: 0.2s ease-out;
@@ -392,6 +460,14 @@ section .TwoColumns .last .buttons {
   height: 520px;
 }
 
+.NativeApps .TwoColumns .first {
+  padding-left: 50px;
+}
+
+.NativeApps .TwoColumns .column {
+  margin-bottom: 270px;
+}
+
 .NativeCode {
   background-color: rgba(0, 0, 0, 0.05);
   overflow-x: hidden;
@@ -415,7 +491,7 @@ section .NativeCodeTwoColumns::-webkit-scrollbar {
 
 .NativeCode .NativeCodeTwoColumns .first {
   padding-right: 50px;
-  margin-left: 45%;
+  margin-left: 53%;
 }
 
 .NativeCode .NativeCodeTwoColumns .last {
@@ -446,6 +522,31 @@ code {
   font-size: 90%;
   padding: 0.1rem 01rem;
 }
+
+/* .twitter-btn {
+  background-color: #03a9f4;
+  border-radius: 4px;
+  box-sizing: border-box;
+  color: var(--white);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  font-size: 13px;
+  font-weight: 400;
+  height: 28px;
+  line-height: 26px;
+  padding: 6px 10px 2px 5px;
+  margin-right: 1rem;
+  width: 100%;
+  white-space: nowrap;
+}
+
+.twitter-btn img {
+  height: 100%;
+  margin-right: 4px;
+  width: 100%;
+  object-fit: none;
+} */
 
 .NativeDevelopment {
   overflow-y: hidden;
@@ -500,8 +601,20 @@ code {
   height: 365px;
 }
 
+video {
+  object-fit: contain;
+  overflow-clip-margin: content-box;
+  overflow: clip;
+  max-width: 100%;
+  min-height: 100%;
+}
+
 .FastRefresh .TwoColumns .first {
   padding-left: 50px;
+}
+
+.FastRefresh .TwoColumns .first .content {
+  padding-right: 15px;
 }
 
 h2 {
@@ -511,14 +624,6 @@ h2 {
   line-height: 1.2;
   margin-bottom: 20px;
   margin-top: 0;
-}
-
-video {
-  object-fit: contain;
-  overflow-clip-margin: content-box;
-  overflow: clip;
-  max-width: 600px;
-  min-height: 340px;
 }
 
 .VideoContent {
@@ -531,10 +636,15 @@ video {
 
 .VideoContent .TwoColumns .first {
   padding-right: 50px;
+  margin-bottom: 85px;
 }
 
 .VideoContent .TwoColumns .last {
   padding-left: 50px;
+}
+
+.VideoContent .TwoColumns .first .video-content-main-section {
+  margin-bottom: 130px;
 }
 
 .VideoContent .TwoColumns .heading {
@@ -579,7 +689,7 @@ video {
 
 .Community .first {
   border-right: 1px solid gray;
-  padding-bottom: 200px;
+  padding-bottom: 135px;
   grid-area: first;
   width: 100%;
   padding-right: 50px;
@@ -589,9 +699,9 @@ video {
   padding-left: 50px;
 }
 
-.Community .last p {
-  margin-bottom: 22px;
-}
+/* .Community .last p {
+  margin-bottom: 35px;
+} */
 
 .Community .last .AppList {
   margin-top: 22px;
@@ -884,6 +994,7 @@ footer .footer__logo {
 
   .NativeApps .TwoColumns .column {
     padding: 0 1.25rem;
+    margin-bottom: 0;
   }
 
   .NativeApps .TwoColumns .last {
@@ -949,7 +1060,8 @@ footer .footer__logo {
   }
 
   video {
-    width: 400px;
+    width: 100%;
+    height: auto;
   }
 
   .FastRefresh .TwoColumns .last {

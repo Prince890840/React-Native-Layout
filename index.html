@@ -35,7 +35,7 @@
           </a>
           <ul>
             <li>
-              <select name="menu" id="menu">
+              <select name="menu" id="menu" class="select-opt">
                 <option value="development">Development</option>
                 <option value="guides">Guides</option>
                 <option value="components">Components</option>
@@ -66,17 +66,16 @@
               <a
                 href="https://github.com/facebook/react-native"
                 target="_blank"
-                class="navbar-github-link"
+                id="navbar-github-link"
               >
               </a>
             </li>
             <li>
-              <div>
+              <div class="toggle">
                 <img
-                  src="/assets/Images/icons8-sun-50.svg"
+                  src="/assets/Images/sub-svg-image.svg"
                   alt="light-mode"
-                  width="24px"
-                  height="24px"
+                  class="toggle-image"
                 />
               </div>
             </li>
@@ -85,7 +84,7 @@
                 <button aria-label="Search" class="DocSearch-Button">
                   <span class="DocSearch-Button-Container">
                     <img
-                      src="/assets/Images/icons8-ctrl-office/icons8-ctrl-30.png"
+                      src="/assets/Images/search-icon-1.png"
                       alt="ctrl"
                       width="20px"
                       height="20px"
@@ -94,14 +93,13 @@
                   </span>
                   <span class="DocSearch-Button-Keys">
                     <kbd class="DocSearch-Button-Key">
-                      <img
+                      <!-- <img
                         src="/assets/Images/icons8-ctrl-office/icons8-ctrl-30.png"
                         alt="ctrl"
-                        width="15px"
-                        height="15px"
-                      />
+                      /> -->
+                      ctrl
                     </kbd>
-                    <kbd> K </kbd>
+                    <kbd class="DocSearch-Button-Key"> K </kbd>
                   </span>
                 </button>
               </div>
@@ -176,7 +174,11 @@
               class="twitter-follow-button"
               target="_blank"
             >
-              <div class="icon">Follow @reactnative</div></a
+              <img
+                src="/assets/Images/twitter-circle.svg"
+                alt="twitter-image"
+              />
+              Follow @reactnative</a
             >
             <a
               class="btn"
@@ -184,10 +186,11 @@
               target="_blank"
               aria-label="star facebook/react-native on GitHub"
             >
+              <img src="/assets/Images/star-image.png" alt="star-image" />
               <span>Star</span>
             </a>
           </div>
-          <div class="TwoColumns">
+          <div class="HeaderHero TwoColumns">
             <div class="first">
               <img src="assets/Images/header_logo.svg" alt="content-image" />
             </div>
@@ -339,7 +342,7 @@
           <div class="TwoColumns reverse">
             <div class="first column">
               <h2>Fast Refresh</h2>
-              <div>
+              <div class="content">
                 <strong>See your changes as soon as you save.</strong>
                 With the power of JavaScript, React Native lets you iterate at
                 lightning speed. No more waiting for native builds to finish.
@@ -348,8 +351,6 @@
             </div>
             <div class="last">
               <video
-                width="600px"
-                height="340px"
                 muted
                 autoplay
                 loop
@@ -392,7 +393,7 @@
           </div>
           <div class="TwoColumns reverse">
             <div class="first">
-              <div>
+              <div class="video-content-main-section">
                 The
                 <a href="https://opensource.fb.com/">Meta Open Source team</a>
                 has put together a short overview of React Native, where they
@@ -415,7 +416,7 @@
             <h2>Facebook Supported, Community Driven</h2>
             <div class="TwoColumns reverse">
               <div class="first rightLine">
-                <div class="first-paragraph">
+                <div class="first-paragraph" style="margin-bottom: 21.25px">
                   <img
                     src="/assets/Images/fb-logo.svg"
                     alt="facebook-logo-image"
@@ -425,7 +426,7 @@
                     maintaining it ever since.</span
                   >
                 </div>
-                <p>
+                <p style="margin-bottom: 21.25px">
                   In 2018 React Native had the
                   <a
                     href="https://octoverse.github.com/2018/projects#repositories"
@@ -459,7 +460,7 @@
                     ></span
                   >.
                 </p>
-                <p style="margin-top: 15px">
+                <p style="margin-bottom: 21.25px">
                   Our community is always shipping exciting new projects and
                   exploring platforms beyond Android and iOS with repos like
                   <span
