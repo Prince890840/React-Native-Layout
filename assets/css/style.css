@@ -278,6 +278,7 @@ main .Section {
 
 main .Section {
   width: 100%;
+  height: 100%;
 }
 
 section.dark {
@@ -1153,5 +1154,268 @@ footer .footer__logo {
     margin-bottom: 24px;
     max-width: 99% !important;
     text-align: center;
+  }
+}
+
+@media screen and (min-width: 481px) and (max-width: 960px) {
+  header .announcementBar .announcementBarContent {
+    font-size: 18px;
+  }
+
+  nav {
+    display: none;
+  }
+
+  nav.mobile-nav {
+    display: flex;
+    padding: 8.5px 16px;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  nav .searchBox {
+    background-color: white;
+    padding: 6px 12px 0px 12px;
+    border-radius: 8px;
+  }
+
+  .mobile-navbar-container {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 200;
+    transition: all 400ms ease;
+  }
+
+  .mobile-navbar-container.active {
+    left: 0;
+  }
+
+  .mobile-navbar-container .close-icon {
+    position: fixed;
+    top: 66px;
+    left: 18px;
+    opacity: 0;
+    pointer-events: none;
+    /* it's can't be click */
+    transition: all 400ms ease;
+  }
+
+  .mobile-navbar-container.active .close-icon {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .mobile-navbar-container ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  .mobile-navbar-container ul li {
+    padding: 45px 0;
+    margin: 0;
+    text-align: center;
+  }
+
+  .mobile-navbar-container ul li a {
+    text-decoration: none;
+    font-size: 55px;
+    background: none;
+  }
+
+  section .TwoColumns {
+    grid-template-areas:
+      "first"
+      "last";
+    grid-template-columns: 1fr;
+  }
+
+  section .TwoColumns .last {
+    text-align: center;
+  }
+
+  section .TwoColumns .last .title {
+    font-size: 84px;
+  }
+
+  section .TwoColumns .first {
+    padding-left: 0px;
+  }
+
+  .NativeApps {
+    overflow: hidden;
+    max-height: 765px;
+  }
+
+  .NativeApps .reverse {
+    grid-template-areas:
+      "first"
+      "last";
+    grid-template-columns: 1fr;
+  }
+
+  .NativeApps .TwoColumns .column {
+    padding: 0 4rem;
+    margin-bottom: 0;
+  }
+
+  .NativeApps .TwoColumns .last {
+    max-height: 340px;
+  }
+
+  .NativeCode {
+    overflow-x: hidden;
+    padding-bottom: 50px;
+    padding-top: 50px;
+  }
+
+  .NativeCode .reverse {
+    grid-template-areas:
+      "first"
+      "last";
+    grid-template-columns: 1fr;
+  }
+
+  .NativeCode .NativeCodeTwoColumns .first {
+    margin-left: 0;
+    padding: 0;
+  }
+
+  .NativeCode .NativeCodeTwoColumns .column {
+    padding: 0 4rem;
+  }
+
+  .NativeCode .column.last {
+    margin-bottom: -50px;
+    overflow-x: hidden;
+    padding: 0;
+    width: 100%;
+  }
+
+  .NativeDevelopment .reverse {
+    grid-template-areas:
+      "first"
+      "last";
+    grid-template-columns: 1fr;
+  }
+
+  .NativeDevelopment {
+    max-height: 700px;
+  }
+
+  .NativeDevelopment .TwoColumns .last .dissection {
+    height: 350px;
+    margin-top: 0px;
+    position: relative;
+  }
+
+  .NativeDevelopment .TwoColumns .column {
+    padding: 0 4rem;
+  }
+
+  .CrossPlatform .reverse {
+    grid-template-areas:
+      "first"
+      "last";
+    grid-template-columns: 1fr;
+  }
+
+  .CrossPlatform .TwoColumns .column {
+    padding: 0 4rem;
+  }
+
+  .FastRefresh {
+    padding-bottom: 50px;
+    padding-top: 50px;
+  }
+
+  .FastRefresh .reverse {
+    grid-template-areas:
+      "first"
+      "last";
+    grid-template-columns: 1fr;
+  }
+
+  .FastRefresh .TwoColumns .last {
+    padding: 0px 1.25rem;
+  }
+
+  .FastRefresh .TwoColumns .column {
+    padding: 0 4rem;
+  }
+
+  .VideoContent .reverse {
+    grid-template-areas:
+      "first"
+      "last";
+    grid-template-columns: 1fr;
+  }
+
+  .VideoContent .TwoColumns .last {
+    padding: 0px 4rem;
+  }
+
+  .VideoContent .TwoColumns {
+    grid-gap: 2rem;
+  }
+
+  .VideoContent .TwoColumns .column {
+    padding: 0 4rem;
+  }
+
+  .VideoContent .TwoColumns .first {
+    margin-bottom: 0;
+  }
+
+  .VideoContent .TwoColumns .first .video-content-main-section {
+    margin-bottom: 0px;
+  }
+
+  .VideoContent .TwoColumns .last {
+    padding-top: 56.25%;
+    position: relative;
+    width: 100%;
+  }
+
+  .VideoContent .TwoColumns .last iframe {
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+
+  .Community h2 {
+    margin-bottom: 1.5rem;
+    padding: 0 1rem;
+    width: 100%;
+  }
+
+  .Community .reverse {
+    grid-template-areas:
+      "first"
+      "last";
+    grid-template-columns: 1fr;
+  }
+
+  .Community .TwoColumns .column {
+    padding: 0 4rem;
+  }
+
+  .Community .TwoColumns .last .column {
+    padding: 0 4rem;
+  }
+
+  .GetStarted .terminal {
+    max-width: 900px;
+  }
+
+  .GetStarted .content {
+    width: 100%;
   }
 }
