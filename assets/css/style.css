@@ -62,23 +62,11 @@ header .announcementBar .announcementBarContent a {
 
 nav {
   width: 100%;
-  position: fixed;
-  top: 0;
-  z-index: 100;
-  transition: all 500ms ease;
   background-color: var(--dark);
 }
 
 nav.navbar {
   padding: calc(1rem * 0.5) 16px;
-}
-
-nav.scrolled {
-  background: var(--dark-color);
-  box-shadow: 0 16px 14px -8px rgba(0, 0, 0, 0.3);
-  border-radius: 0 0 8px 8px;
-  top: 0;
-  padding: 12px;
 }
 
 .navbar #navbar-github-link::after {
@@ -505,7 +493,7 @@ section .NativeCodeTwoColumns::-webkit-scrollbar {
 
 .NativeCode .NativeCodeTwoColumns .first {
   padding-right: 50px;
-  margin-left: 40%;
+  margin-left: 53%;
   max-width: 670px;
 }
 
@@ -555,7 +543,6 @@ code {
   width: 100%;
   white-space: nowrap;
 }
-
 .twitter-btn img {
   height: 100%;
   margin-right: 4px;
