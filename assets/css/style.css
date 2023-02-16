@@ -769,7 +769,7 @@ h2 {
   flex-direction: column;
   padding: 30px 30px 0;
   position: relative;
-  width: 100%;
+  width: 600px;
 }
 
 .GetStarted .section-heading {
@@ -1478,7 +1478,7 @@ footer .footer__logo {
   }
 
   .GetStarted .terminal {
-    max-width: 900px;
+    width: 100%;
   }
 
   .GetStarted .content {
