@@ -8,6 +8,7 @@
   --dark: #20232a;
   --section-dark: #282c34;
   --white: #fff;
+  --font-color: rgba(32, 35, 42, 0.6);
 
   /* height */
   --docusaurus-announcement-bar-height: auto !important;
@@ -20,6 +21,20 @@
   --font-weight-400: 400;
   --font-weight-600: 600;
   --font-weight-700: 700;
+
+  /* text-formation */
+  --text-align: center;
+}
+
+@font-face {
+  font-family: "SFMono-Regular";
+  src: url(/assets/font/SF-Mono/SF-Mono-Light.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Optimistic Display";
+  src: url(/assets/font/optimistic_display_md.ttf) format("truetype");
+  font-weight: normal;
 }
 
 *,
@@ -28,21 +43,26 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Optimistic Display", serif;
+  font-family: "Optimistic Display", system-ui, -apple-system, sans-serif;
 }
 
 body {
   max-width: 100%;
+  color: #1c1e21;
 }
 
 a {
   text-decoration: none;
 }
 
+div {
+  font-size: 17px;
+}
+
 header .announcementBar {
   background-color: var(--dark);
   border-bottom-color: var(--dark);
-  text-align: center;
+  text-align: var(--text-align);
   color: var(--white);
   height: var(--docusaurus-announcement-bar-height);
 }
@@ -69,22 +89,19 @@ nav.navbar {
   padding: calc(1rem * 0.5) 16px;
 }
 
+.navbar .desktop-content {
+  display: none;
+}
+
 .navbar #navbar-github-link::after {
-  background-image: url(/assets/Images/icons8-github-30.svg);
+  background-image: url(/assets/Images/github-icon/icons8-github-30.svg);
   background-position: 50%;
   background-repeat: no-repeat;
   content: "";
+  display: flex;
   height: 24px;
   transition: opacity 0.2s;
   width: 24px;
-  display: flex;
-  padding: 0.25rem 18px;
-  text-decoration: none;
-  user-select: none;
-  font-weight: var(--font-weight-400);
-  font-size: 17px;
-  color: var(--white);
-  -webkit-user-select: none;
 }
 
 .navbar .DocSearch-Button {
@@ -156,6 +173,7 @@ nav.navbar {
 
 .navbar .searchBox {
   padding-left: 14px;
+  box-sizing: border-box;
   /* padding: 0.25rem 16px; */
 }
 
@@ -193,11 +211,12 @@ nav .navbar__logo {
   height: 34px;
   transition: transform 0.5s;
   width: 38px;
+  margin: 0px 8.5px;
 }
 
-nav .navbar__brand .navbar__logo img {
+/* nav .navbar__brand .navbar__logo img {
   height: 25px;
-}
+} */
 
 nav ul {
   display: flex;
@@ -221,7 +240,7 @@ nav ul li select {
   background: none;
   border: none;
   display: inline-block;
-  /* padding: 0.25rem 18px; */
+  padding: 0.25rem 0px 0.25rem 18px;
   text-decoration: none;
   user-select: none;
   font-weight: var(--font-weight-400);
@@ -261,6 +280,10 @@ nav ul li select:hover {
   color: #06bcee;
 }
 
+nav .searchBox .DocSearch-Button:hover {
+  border: 2px solid #06bcee;
+}
+
 /* navbar End */
 
 main .homepage,
@@ -297,59 +320,67 @@ section .socialLinks {
 }
 
 section .socialLinks .twitter-follow-button {
-  background-color: #03a9f4;
+  background-color: #1b95e0;
   border-radius: 4px;
   box-sizing: border-box;
-  color: var(--white);
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  font-size: 13px;
-  font-weight: 400;
-  height: 28px;
-  line-height: 26px;
-  padding: 6px 10px 2px 5px;
-  margin-right: 1rem;
-  max-width: 190px;
-  white-space: nowrap;
-}
-
-.twitter-follow-button img {
-  height: 100%;
-  margin-right: 4px;
-  width: 100%;
-  object-fit: none;
-}
-
-section .socialLinks .btn {
-  color: #24292f;
-  background-color: #ebf0f4;
-  border-color: #ccd1d5;
-  border-color: rgba(27, 31, 36, 0.15);
-  white-space: nowrap;
-  padding: 5px 10px 1px 9px;
+  color: #fff;
   cursor: pointer;
   display: inline-block;
   font-size: 13px;
   font-weight: 400;
   height: 28px;
   line-height: 26px;
+  padding: 1px 10px 1px 9px;
+  position: relative;
+  margin-right: 1rem;
+}
+
+.twitter-follow-button img {
+  /* height: 100%;
+  margin-right: 4px;
+  width: 100%;
+  object-fit: none; */
+  display: inline-block;
+  height: 18px;
+  margin-right: 4px;
+  position: relative;
+  top: 4px;
+  width: 18px;
+}
+
+section .socialLinks .btn {
+  color: #24292f;
+  background-color: #ebf0f4;
+  border-color: rgba(27, 31, 36, 0.15);
   border-radius: 4px;
   box-sizing: border-box;
-  white-space: nowrap;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 13px;
+  font-weight: 400;
+  height: 28px;
+  line-height: 26px;
+  padding: 1px 10px 1px 9px;
+  position: relative;
 }
 
 .btn img {
-  height: 100%;
+  /* height: 100%;
   margin-right: 4px;
   object-fit: contain;
-  max-width: 50px;
+  max-width: 50px; */
+  display: inline-block;
+  height: 18px;
+  margin-right: 4px;
+  position: relative;
+  top: 4px;
+  width: 18px;
 }
 
-.btn span {
+/* .btn span {
   position: relative;
   bottom: 6px;
-}
+} */
 
 section .TwoColumns {
   display: grid;
@@ -370,11 +401,12 @@ section .TwoColumns .first {
 section .TwoColumns .last {
   grid-area: last;
   width: 100%;
+  height: 100%;
   /* padding-right: 50px; */
   max-width: none;
 }
 
-section .TwoColumns .first img {
+section .TwoColumns .first .hero-section-image {
   height: 250px;
   width: 100%;
 }
@@ -407,7 +439,7 @@ section .TwoColumns .last .buttons {
   font-weight: 400;
   max-width: 50%;
   padding: 12.75px 25.5px;
-  text-align: center;
+  text-align: var(--text-align);
   text-decoration: none !important;
   transition: 0.2s ease-out;
 }
@@ -505,7 +537,7 @@ section .NativeCodeTwoColumns::-webkit-scrollbar {
   background-color: #1b95e0;
   border-radius: 4px;
   box-sizing: border-box;
-  color: var(--white);
+  color: #fff;
   cursor: pointer;
   display: inline-block;
   font-size: 13px;
@@ -513,49 +545,35 @@ section .NativeCodeTwoColumns::-webkit-scrollbar {
   height: 28px;
   line-height: 26px;
   padding: 1px 10px 1px 9px;
+  position: relative;
+  margin-top: 25.5px;
   margin-right: 1rem;
-  margin-top: 1.5rem;
+}
+
+.twitter-btn img {
+  display: inline-block;
+  height: 18px;
+  margin-right: 4px;
+  position: relative;
+  top: 4px;
+  width: 18px;
 }
 
 code {
+  color: #1c1e21;
   background-color: rgba(0, 0, 0, 0.06);
   border: 0.1rem solid rgba(0, 0, 0, 0.1);
   border-radius: 3px;
-  font-family: "Monaco";
+  font-family: "SFMono-Regular", Menlo, Monaco, Consolas, "Liberation Mono",
+    "Courier New", monospace;
   font-size: 90%;
   padding: 0.1rem 01rem;
 }
 
-/* .twitter-btn {
-  background-color: #03a9f4;
-  border-radius: 4px;
-  box-sizing: border-box;
-  color: var(--white);
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  font-size: 13px;
-  font-weight: 400;
-  height: 28px;
-  line-height: 26px;
-  padding: 6px 10px 2px 5px;
-  margin-right: 1rem;
-  width: 100%;
-  white-space: nowrap;
-}
-
-.twitter-btn img {
-  height: 100%;
-  margin-right: 4px;
-  width: 100%;
-  object-fit: none;
-} */
-
 .NativeDevelopment {
   overflow-y: hidden;
-  padding: 50px 0px;
-  max-height: 400px;
-  height: 420px;
+  padding-bottom: 70px;
+  max-height: 420px;
 }
 
 .NativeDevelopment .reverse {
@@ -571,7 +589,7 @@ code {
 }
 
 .NativeDevelopment .TwoColumns .last .dissection {
-  margin-top: -105px;
+  margin-top: -60px;
   position: relative;
 }
 
@@ -592,6 +610,7 @@ code {
 
 .CrossPlatform .TwoColumns .first {
   padding-right: 50px;
+  margin-bottom: 215px;
 }
 
 .CrossPlatform .TwoColumns .last {
@@ -615,6 +634,10 @@ video {
 
 .FastRefresh .TwoColumns .first .content {
   padding-right: 15px;
+}
+
+.FastRefresh .TwoColumns {
+  grid-template-columns: 2fr 1fr;
 }
 
 h2 {
@@ -656,11 +679,6 @@ h2 {
 .VideoContent .TwoColumns {
   grid-template-columns: 1fr 2fr;
 }
-
-/* .iframe-content {
-  min-width: 560px;
-  min-height: 315px;
-} */
 
 .Community .content {
   display: flex;
@@ -705,10 +723,6 @@ h2 {
   padding-left: 50px;
 }
 
-/* .Community .last p {
-  margin-bottom: 35px;
-} */
-
 .Community .last .AppList {
   margin-top: 22px;
   display: grid;
@@ -738,7 +752,7 @@ h2 {
   display: flex;
   flex-direction: column;
   margin: 0 auto;
-  max-width: 900px;
+  max-width: 100%;
 }
 
 .GetStarted .steps li::marker {
@@ -755,12 +769,12 @@ h2 {
   flex-direction: column;
   padding: 30px 30px 0;
   position: relative;
-  width: 600px;
+  width: 100%;
 }
 
 .GetStarted .section-heading {
   color: var(--brand);
-  text-align: center;
+  text-align: var(--text-align);
   font-size: 25px;
   font-weight: 700;
   line-height: 1.2;
@@ -878,7 +892,7 @@ footer .footer__link-item:hover {
 footer .footer__bottom {
   color: #858a96;
   font-size: 13px;
-  text-align: center;
+  text-align: var(--text-align);
 }
 
 footer .footer__logo {
@@ -902,7 +916,6 @@ footer .footer__logo {
   nav.mobile-nav {
     display: flex;
     padding: 8.5px 16px;
-    justify-content: space-between;
     align-items: center;
   }
 
@@ -910,6 +923,7 @@ footer .footer__logo {
     background-color: white;
     padding: 6px 12px 0px 12px;
     border-radius: 8px;
+    margin: 0px 0px 0px auto;
   }
 
   .mobile-navbar-container {
@@ -952,7 +966,7 @@ footer .footer__logo {
   .mobile-navbar-container ul li {
     padding: 45px 0;
     margin: 0;
-    text-align: center;
+    text-align: var(--text-align);
   }
 
   .mobile-navbar-container ul li a {
@@ -975,8 +989,16 @@ footer .footer__logo {
     padding-top: 20px;
   }
 
+  section .socialLinks .btn {
+    margin-right: 1rem;
+  }
+
   section .TwoColumns .last {
     /* padding: 0px 22px; */
+  }
+
+  section .TwoColumns .col {
+    padding: 0 1.25rem;
   }
 
   section .TwoColumns .last .title {
@@ -1065,6 +1087,10 @@ footer .footer__logo {
     grid-template-columns: 1fr;
   }
 
+  .CrossPlatform .TwoColumns .first {
+    margin-bottom: 0;
+  }
+
   .CrossPlatform .TwoColumns .column {
     padding: 0 1.25rem;
   }
@@ -1140,6 +1166,10 @@ footer .footer__logo {
     width: 80%;
   }
 
+  .GetStarted code {
+    padding-right: 0px;
+  }
+
   footer .footer__links {
     padding: 0 20px;
   }
@@ -1153,7 +1183,11 @@ footer .footer__logo {
     flex-basis: 99% !important;
     margin-bottom: 24px;
     max-width: 99% !important;
-    text-align: center;
+    text-align: var(--text-align);
+  }
+
+  footer .footer__copyright {
+    font-size: 13px;
   }
 }
 
@@ -1169,7 +1203,6 @@ footer .footer__logo {
   nav.mobile-nav {
     display: flex;
     padding: 8.5px 16px;
-    justify-content: space-between;
     align-items: center;
   }
 
@@ -1177,6 +1210,7 @@ footer .footer__logo {
     background-color: white;
     padding: 6px 12px 0px 12px;
     border-radius: 8px;
+    margin: 0px 0px 0px auto;
   }
 
   .mobile-navbar-container {
@@ -1219,7 +1253,7 @@ footer .footer__logo {
   .mobile-navbar-container ul li {
     padding: 45px 0;
     margin: 0;
-    text-align: center;
+    text-align: var(--text-align);
   }
 
   .mobile-navbar-container ul li a {
@@ -1236,7 +1270,7 @@ footer .footer__logo {
   }
 
   section .TwoColumns .last {
-    text-align: center;
+    text-align: var(--text-align);
   }
 
   section .TwoColumns .last .title {
@@ -1245,6 +1279,10 @@ footer .footer__logo {
 
   section .TwoColumns .first {
     padding-left: 0px;
+  }
+
+  section .socialLinks .btn {
+    margin-right: 1rem;
   }
 
   .NativeApps {
@@ -1297,6 +1335,10 @@ footer .footer__logo {
     width: 100%;
   }
 
+  .NativeCode .NativeCodeTwoColumns {
+    grid-gap: 2rem;
+  }
+
   .NativeDevelopment .reverse {
     grid-template-areas:
       "first"
@@ -1329,6 +1371,14 @@ footer .footer__logo {
     padding: 0 4rem;
   }
 
+  .CrossPlatform .TwoColumns {
+    grid-gap: 2rem;
+  }
+
+  .CrossPlatform .TwoColumns .first {
+    margin-bottom: 0;
+  }
+
   .FastRefresh {
     padding-bottom: 50px;
     padding-top: 50px;
@@ -1341,8 +1391,12 @@ footer .footer__logo {
     grid-template-columns: 1fr;
   }
 
+  .FastRefresh .TwoColumns {
+    grid-gap: 2rem;
+  }
+
   .FastRefresh .TwoColumns .last {
-    padding: 0px 1.25rem;
+    padding: 0;
   }
 
   .FastRefresh .TwoColumns .column {
@@ -1379,6 +1433,7 @@ footer .footer__logo {
   .VideoContent .TwoColumns .last {
     padding-top: 56.25%;
     position: relative;
+    padding-left: 68px;
     width: 100%;
   }
 
@@ -1388,11 +1443,12 @@ footer .footer__logo {
     position: absolute;
     top: 0;
     width: 100%;
+    padding: 0 68px;
   }
 
   .Community h2 {
     margin-bottom: 1.5rem;
-    padding: 0 1rem;
+    padding: 0 4rem;
     width: 100%;
   }
 
@@ -1411,11 +1467,61 @@ footer .footer__logo {
     padding: 0 4rem;
   }
 
+  .Community .last .AppList {
+    margin: 2rem auto;
+    max-width: 500px;
+    width: 100%;
+  }
+
+  .Community .TwoColumns .last .community-paragraph {
+    text-align: left;
+  }
+
   .GetStarted .terminal {
     max-width: 900px;
   }
 
   .GetStarted .content {
     width: 100%;
+  }
+
+  footer .footer__links {
+    padding: 0 20px;
+    margin-bottom: 8px;
+  }
+
+  footer .footer__col {
+    flex-basis: 48% !important;
+    margin-bottom: 28px;
+    max-width: 48% !important;
+    text-align: center;
+  }
+
+  footer .footer__copyright {
+    font-size: 13px;
+  }
+}
+
+@media screen and (min-width: 960px) and (max-width: 1100px) {
+  .navbar .desktop {
+    display: none;
+  }
+
+  .navbar ul .search-item {
+    margin-left: 14px;
+  }
+
+  .navbar .desktop-content {
+    display: inline-block;
+    background-color: white;
+    padding: 6px 12px 0px 12px;
+    border-radius: 8px;
+    margin: 0px 0px 0px auto;
+  }
+}
+
+@media screen and (min-width: 1000px) and (max-width: 1200px) {
+  .NativeCode .NativeCodeTwoColumns .first {
+    margin-left: 20%;
   }
 }
