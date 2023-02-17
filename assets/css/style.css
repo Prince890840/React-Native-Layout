@@ -900,6 +900,18 @@ footer .footer__logo {
   max-width: 100%;
 }
 
+footer .footer__bottom .footer__copyright {
+  font-size: 13px;
+}
+
+footer .footer__bottom img {
+  opacity: 0.5;
+}
+
+footer .footer__bottom img:hover {
+  opacity: 1;
+}
+
 /* Footer Section End */
 
 @media screen and (max-width: 500px) {
