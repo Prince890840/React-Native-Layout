@@ -80,6 +80,44 @@ header .announcementBar .announcementBarContent a {
   display: inline-block;
 }
 
+.select-wrapper select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-color: #20232a;
+  border: none;
+  padding-right: 1.5rem;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  color: #fff;
+}
+
+.select-wrapper select:focus {
+  outline: none;
+  border-color: #0070f3;
+}
+
+.select-wrapper::after {
+  border-color: gray transparent;
+  border-style: solid;
+  border-width: 0.4em 0.4em 0;
+  content: "";
+  margin-left: 0.3em;
+  position: relative;
+  top: 12px;
+  right: 15px;
+  transform: translateY(-50%);
+}
+
+/* .select-wrapper:hover {
+  background-color: #61dafb;
+  color: white;
+} */
+
+.select-wrapper select:focus + ::after {
+  border-color: #0070f3 transparent;
+}
+
 nav {
   width: 100%;
   background-color: var(--dark);
