@@ -43,7 +43,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Optimistic Display", system-ui, -apple-system, sans-serif;
 }
 
 body {
@@ -90,6 +89,7 @@ header .announcementBar .announcementBarContent a {
   font-size: 1rem;
   line-height: 1.5rem;
   color: #fff;
+  font-family: "Optimistic Display", system-ui, -apple-system, sans-serif;
 }
 
 .select-wrapper select:focus {
@@ -104,7 +104,7 @@ header .announcementBar .announcementBarContent a {
   content: "";
   margin-left: 0.3em;
   position: relative;
-  top: 12px;
+  top: 13px;
   right: 20px;
   transform: translateY(-50%);
 }
@@ -116,6 +116,12 @@ header .announcementBar .announcementBarContent a {
 
 .select-wrapper select:focus + ::after {
   border-color: #0070f3 transparent;
+}
+
+.fixed {
+  position: fixed;
+  top: 0;
+  z-index: 999;
 }
 
 nav {
@@ -200,9 +206,9 @@ nav.navbar {
 }
 
 .navbar .DocSearch-Button-Key svg {
-  margin-bottom: 1px !important;
-  margin-left: -4px;
-  margin-right: -5px;
+  margin-bottom: 2px !important;
+  margin-left: -6px;
+  margin-right: -10px;
 }
 
 .navbar .DocSearch-Button-Key img {
@@ -212,7 +218,7 @@ nav.navbar {
 .navbar .DocSearch-Button-Key,
 .navbar .DocSearch-Button-Placeholder {
   font-size: 14px !important;
-  padding: 3px 8px 0 6px;
+  padding: 1px 8px 0 6px;
 }
 
 .navbar .searchBox {
@@ -244,6 +250,7 @@ nav .navbar__brand {
 }
 
 nav .navbar__brand .navbar__title {
+  font-family: "Optimistic Display", system-ui, -apple-system, sans-serif;
   font-size: 18px;
   font-weight: var(--font-weight-600);
   color: var(--white);
@@ -283,6 +290,7 @@ nav ul li a {
   font-size: 17px;
   color: var(--white);
   -webkit-user-select: none;
+  font-family: "Optimistic Display", system-ui, -apple-system, sans-serif;
 }
 
 nav ul li select {
@@ -309,7 +317,7 @@ nav ul li .navbar__item {
   width: 2rem;
 }
 
-.navbar .toggle .toggle-image {
+/* .navbar .toggle .toggle-image {
   align-items: center;
   border-radius: 50%;
   display: flex;
@@ -317,6 +325,11 @@ nav ul li .navbar__item {
   justify-content: center;
   transition: background var(--ifm-transition-fast);
   width: 100%;
+} */
+
+.navbar .toggle svg {
+  display: block;
+  color: #fff;
 }
 
 nav.mobile-nav,
@@ -485,12 +498,13 @@ section .TwoColumns .last .buttons {
 .actionButton {
   border-bottom: none;
   font-size: 1.25rem;
-  font-weight: 600;
+  font-weight: 400;
   max-width: 50%;
   padding: 12.75px 25.5px;
   text-align: var(--text-align);
   text-decoration: none !important;
   transition: 0.2s ease-out;
+  font-family: "Optimistic Display", system-ui, -apple-system, sans-serif;
 }
 
 .actionButton.primary {
@@ -830,6 +844,7 @@ h2 {
   line-height: 1.2;
   margin-bottom: 20px;
   margin-top: 0;
+  font-family: "Optimistic Display", system-ui, -apple-system, sans-serif;
 }
 
 .GetStarted .steps {
@@ -845,6 +860,7 @@ h2 {
   font-size: 17px;
   color: #fff;
   margin-bottom: 2rem;
+  font-family: "Optimistic Display", system-ui, -apple-system, sans-serif;
 }
 
 .GetStarted .terminal:before {
@@ -862,6 +878,7 @@ h2 {
   color: #fff;
   font-size: 18px;
   position: relative;
+  font-family: "SFMono-Regular";
 }
 
 .GetStarted code:first-child:before {
@@ -879,6 +896,7 @@ footer {
   background-color: var(--dark);
   color: #ebedf0;
   padding: calc(1rem * 2) calc(16px * 2);
+  font-family: "Optimistic Display", system-ui, -apple-system, sans-serif;
 }
 
 footer .container {
@@ -965,6 +983,12 @@ footer .footer__bottom img:hover {
 /* Footer Section End */
 
 @media screen and (max-width: 500px) {
+  .fixed {
+    position: fixed;
+    top: 0;
+    z-index: 999;
+  }
+
   header .announcementBar .announcementBarContent {
     font-size: 15px;
     line-height: 22px;
@@ -1254,6 +1278,11 @@ footer .footer__bottom img:hover {
 }
 
 @media screen and (min-width: 481px) and (max-width: 960px) {
+  .fixed {
+    position: fixed;
+    top: 0;
+    z-index: 999;
+  }
   header .announcementBar .announcementBarContent {
     font-size: 18px;
   }
@@ -1413,8 +1442,8 @@ footer .footer__bottom img:hover {
   }
 
   .NativeDevelopment .TwoColumns .last .dissection {
-    height: 350px;
-    margin-top: 0px;
+    height: 452px;
+    margin-top: -30px;
     position: relative;
   }
 
@@ -1565,6 +1594,11 @@ footer .footer__bottom img:hover {
 }
 
 @media screen and (min-width: 960px) and (max-width: 1100px) {
+  .fixed {
+    position: fixed;
+    top: 0;
+    z-index: 999;
+  }
   .navbar .desktop {
     display: none;
   }
