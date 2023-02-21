@@ -364,6 +364,7 @@ main .Section {
 main .Section {
   width: 100%;
   height: 100%;
+  font-family: "Optimistic Display", system-ui, -apple-system, sans-serif;
 }
 
 section.dark {
