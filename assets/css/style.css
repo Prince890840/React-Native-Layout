@@ -98,14 +98,14 @@ header .announcementBar .announcementBarContent a {
 }
 
 .select-wrapper::after {
-  border-color: gray transparent;
+  border-color: #c0c1c4 transparent;
   border-style: solid;
-  border-width: 0.4em 0.4em 0;
+  border-width: 0.41em 0.41em 0;
   content: "";
   margin-left: 0.3em;
   position: relative;
   top: 12px;
-  right: 15px;
+  right: 20px;
   transform: translateY(-50%);
 }
 
