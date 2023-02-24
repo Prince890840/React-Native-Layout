@@ -16,7 +16,7 @@ window.addEventListener("scroll", () => {
   if (window.scrollY > announcementBar.offsetHeight) {
     navbar.classList.add("fixed");
     smallScreenNavbar.classList.add("fixed");
-    announcementBar.style.display =   "none";
+    announcementBar.style.display = "none";
   } else {
     navbar.classList.remove("fixed");
     smallScreenNavbar.classList.remove("fixed");
