@@ -1238,6 +1238,7 @@ footer .footer__bottom img:hover {
 
   .NativeApps .TwoColumns .last {
     max-height: 370px;
+    margin-top: 0;
   }
 
   .NativeCode {
