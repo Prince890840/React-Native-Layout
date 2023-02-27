@@ -55,7 +55,7 @@ a {
 }
 
 div {
-  font-size: 16px;
+  font-size: 17px;
 }
 
 header .announcementBar {
@@ -1029,6 +1029,78 @@ footer .footer__bottom img {
 
 footer .footer__bottom img:hover {
   opacity: 1;
+}
+
+.buttonGroup_aaMX {
+  column-gap: 0.2rem;
+  display: flex;
+  position: absolute;
+  top: calc(1rem / 2);
+  left: 50%;
+}
+
+.buttonGroup_aaMX button {
+  align-items: center;
+  border: 1px solid #dadde1;
+  border-radius: 0.4rem;
+  display: flex;
+  line-height: 0;
+  opacity: 0;
+  padding: 0.4rem;
+  transition: opacity 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+.buttonGroup_aaMX button,
+.codeBlockContainer_mQmQ {
+  background: #282c34;
+  color: #fff;
+}
+
+.copyButtonIcons_z5j7 {
+  height: 1.125rem;
+  position: relative;
+  width: 1.125rem;
+}
+
+.copyButtonIcon_FoOz,
+.copyButtonSuccessIcon_L0B6 {
+  fill: currentColor;
+  height: inherit;
+  left: 0;
+  opacity: inherit;
+  position: absolute;
+  top: 0;
+  transition: 0.15s;
+  width: inherit;
+}
+
+.copyButtonIcon_FoOz,
+.copyButtonSuccessIcon_L0B6 {
+  fill: currentColor;
+  height: inherit;
+  left: 0;
+  opacity: inherit;
+  position: absolute;
+  top: 0;
+  transition: 0.15s;
+  width: inherit;
+}
+
+.copyButtonSuccessIcon_L0B6 {
+  color: #00d600;
+  left: 50%;
+  opacity: 0;
+  top: 50%;
+  transform: translate(-50%, -50%) scale(0.33);
+}
+.buttonGroup_aaMX button:focus-visible,
+.buttonGroup_aaMX button:hover {
+  opacity: 1 !important;
+}
+
+.theme-code-block:hover .buttonGroup_aaMX button {
+  opacity: 0.4;
 }
 
 /* Footer Section End */
