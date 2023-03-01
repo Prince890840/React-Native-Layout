@@ -28,12 +28,12 @@
 
 @font-face {
   font-family: "SFMono-Regular";
-  src: url(/assets/font/SF-Mono/SF-Mono-Light.ttf) format("truetype");
+  src: url(../font/SF-Mono/SF-Mono-Light.ttf) format("truetype");
 }
 
 @font-face {
   font-family: "Optimistic Display";
-  src: url(/assets/font/optimistic_display_md.ttf) format("truetype");
+  src: url(../font/optimistic_display_md.ttf) format("truetype");
   font-weight: normal;
 }
 
@@ -139,7 +139,7 @@ nav.navbar {
 }
 
 .navbar #navbar-github-link::after {
-  background-image: url(/assets/Images/github-icon/icons8-github-30.svg);
+  background-image: url(../Images/github-icon/icons8-github-30.svg);
   background-position: 50%;
   background-repeat: no-repeat;
   content: "";
@@ -1137,7 +1137,7 @@ footer .footer__bottom img:hover {
 
   .mobile-navbar-container {
     position: fixed;
-    width: 36%;
+    width: 22rem;
     height: 100%;
     top: 0;
     left: 100%;
@@ -1432,13 +1432,11 @@ footer .footer__bottom img:hover {
 
   .mobile-navbar-container {
     position: fixed;
-    width: 36%;
+    width: 22rem;
     height: 100%;
     top: 0;
     left: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    display: inline-block;
     z-index: 200;
     transition: all 400ms ease;
     background-color: #fff;
@@ -1448,14 +1446,77 @@ footer .footer__bottom img:hover {
     left: 0;
   }
 
+  .inner-mobile-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    background-color: #20232a;
+    align-items: center;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex: 1;
+    height: 3.75rem;
+    padding: calc(1rem * 0.5) 16px;
+  }
+
+  .navbar__brand {
+    align-items: center;
+    display: flex;
+    margin-right: 1rem;
+    min-width: 0;
+    color: #f5f6f7;
+    font-family: "Optimistic Display";
+    margin: 0 17px 0 0;
+  }
+
+  .navbar__logo {
+    height: 34px;
+    transition: transform 0.5s;
+    width: 38px;
+    margin: 0px 8.5px;
+  }
+
+  .navbar__title {
+    font-size: 18px;
+    font-weight: 600;
+  }
+
+  .navbar__title {
+    flex: 1 1 auto;
+  }
+
+  .text--truncate {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .toggle {
+    margin: 0 17px 0 0;
+  }
+
+  .toggle svg {
+    color: #fff;
+  }
+
+  .close-icon svg {
+    color: #8d949e;
+  }
+
+  .mobile-menu {
+    padding: 8.5px;
+  }
+
   .mobile-navbar-container .close-icon {
-    position: fixed;
+    /* position: fixed;
     top: 66px;
-    left: 18px;
+    left: 18px; */
     opacity: 0;
     pointer-events: none;
     /* it's can't be click */
     transition: all 400ms ease;
+    margin: 0 0 0 auto;
   }
 
   .mobile-navbar-container.active .close-icon {
@@ -1466,18 +1527,24 @@ footer .footer__bottom img:hover {
   .mobile-navbar-container ul {
     list-style: none;
     padding: 0;
+    margin: 4px;
+    font-family: "Optimistic Display";
   }
 
   .mobile-navbar-container ul li {
-    padding: 5px 0;
-    margin: 0;
-    text-align: var(--text-align);
+    text-align: left;
+    margin-bottom: 2px;
+    margin-top: 2px;
+    -webkit-user-select: none;
+    user-select: none;
   }
 
   .mobile-navbar-container ul li a {
     text-decoration: none;
     font-size: 17px;
     background: none;
+    color: #606770;
+    padding: 4px 12px !important;
   }
 
   section .TwoColumns {
