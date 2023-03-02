@@ -597,6 +597,14 @@ section .NativeCodeTwoColumns {
 .NativeCode .NativeCodeTwoColumns .last {
   padding: 0;
   background-color: #282c34;
+  max-height: 450px;
+  overflow-y: scroll;
+}
+
+.NativeCode .NativeCodeTwoColumns .last::-webkit-scrollbar {
+  display: none;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 
 .codeBlockLines_AclH {
