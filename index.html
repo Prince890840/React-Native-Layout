@@ -51,13 +51,6 @@
                   <option value="architecture">Architecture</option>
                 </select>
               </div>
-              <!-- <select name="menu" id="menu" class="select-opt">
-                <option value="development">Development</option>
-                <option value="guides">Guides</option>
-                <option value="components">Components</option>
-                <option value="apis">APIs</option>
-                <option value="architecture">Architecture</option>
-              </select> -->
             </li>
             <li>
               <a href="#" class="navbar__item">Contributing</a>
@@ -93,11 +86,6 @@
                     d="M12,9c1.65,0,3,1.35,3,3s-1.35,3-3,3s-3-1.35-3-3S10.35,9,12,9 M12,7c-2.76,0-5,2.24-5,5s2.24,5,5,5s5-2.24,5-5 S14.76,7,12,7L12,7z M2,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S1.45,13,2,13z M20,13l2,0c0.55,0,1-0.45,1-1 s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S19.45,13,20,13z M11,2v2c0,0.55,0.45,1,1,1s1-0.45,1-1V2c0-0.55-0.45-1-1-1S11,1.45,11,2z M11,20v2c0,0.55,0.45,1,1,1s1-0.45,1-1v-2c0-0.55-0.45-1-1-1C11.45,19,11,19.45,11,20z M5.99,4.58c-0.39-0.39-1.03-0.39-1.41,0 c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0s0.39-1.03,0-1.41L5.99,4.58z M18.36,16.95 c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0c0.39-0.39,0.39-1.03,0-1.41 L18.36,16.95z M19.42,5.99c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41 s1.03,0.39,1.41,0L19.42,5.99z M7.05,18.36c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06 c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L7.05,18.36z"
                   ></path>
                 </svg>
-                <!-- <img
-                  src="/assets/Images/sun-icon/icons8-sun-24.svg"
-                  alt="light-mode"
-                  class="toggle-image navbar__item"
-                /> -->
               </div>
             </li>
             <li class="search-item">
@@ -127,12 +115,6 @@
                           stroke-linecap="square"
                         ></path>
                       </svg>
-                      <!-- <img
-                        src="/assets/Images/icons8-ctrl-office/icons8-ctrl-30.png"
-                        alt="ctrl"
-                        height="24px"
-                      /> -->
-                      <!-- CTRL -->
                     </kbd>
                     <kbd class="DocSearch-Button-Key"> K </kbd>
                   </span>
@@ -198,16 +180,34 @@
             </svg>
           </div>
           <div class="close-icon">
-            <img
-              src="./assets/Images/close-icon.png"
-              alt="close-icon-image"
-              width="30px"
-              height="30px"
-            />
+            <svg
+              viewBox="0 0 15 15"
+              width="21"
+              height="21"
+              class="lightToggleIcon_lgto"
+            >
+              <g stroke="#8d949e" stroke-width="1.2">
+                <path
+                  fill="currentColor"
+                  d="M.75.75l13.5 13.5M14.25.75L.75 14.25"
+                ></path>
+              </g>
+            </svg>
           </div>
         </div>
         <div class="mobile-menu">
           <ul>
+            <li>
+              <div class="select-wrapper-mobile">
+                <select>
+                  <option value="development">Development</option>
+                  <option value="guides">Guides</option>
+                  <option value="components">Components</option>
+                  <option value="apis">APIs</option>
+                  <option value="architecture">Architecture</option>
+                </select>
+              </div>
+            </li>
             <li>
               <a href="#">Contributing</a>
             </li>
@@ -322,6 +322,18 @@
             </div>
             <div class="last">
               <iframe
+                src="https://carbon.now.sh/embed?bg=rgba%28171%2C+184%2C+195%2C+1%29&t=one-dark&wt=sharp&l=javascript&width=680&ds=false&dsyoff=0px&dsblur=0px&wc=true&wa=true&pv=0px&ph=0px&ln=false&fl=1&fm=Hack&fs=13px&lh=156%25&si=false&es=2x&wm=false&code=%250Aimport%2520React%2520from%2520%27react%27%253B%250Aimport%2520%257BText%252C%2520View%257D%2520from%2520%27react-native%27%253B%250Aimport%2520%257BHeader%257D%2520from%2520%27.%252FHeader%27%253B%250Aimport%2520%257Bheading%257D%2520from%2520%27.%252FTypography%27%253B%250A%250Aconst%2520WelcomeScreen%2520%253D%2520%28%29%2520%253D%253E%2520%28%250A%2520%2520%253CView%253E%250A%2520%2520%2520%2520%253CHeader%2520title%253D%2522Welcome%2520to%2520React%2520Native%2522%252F%253E%250A%2520%2520%2520%2520%253CText%2520style%253D%257Bheading%257D%253EStep%2520One%253C%252FText%253E%250A%2520%2520%2520%2520%253CText%253E%250A%2520%2520%2520%2520%2520%2520Edit%2520App.js%2520to%2520change%2520this%2520screen%2520and%2520turn%2520it%250A%2520%2520%2520%2520%2520%2520into%2520your%2520app.%250A%2520%2520%2520%2520%253C%252FText%253E%250A%2520%2520%2520%2520%253CText%2520style%253D%257Bheading%257D%253ESee%2520Your%2520Changes%253C%252FText%253E%250A%2520%2520%2520%2520%253CText%253E%250A%2520%2520%2520%2520%2520%2520Press%2520Cmd%2520%252B%2520R%2520inside%2520the%2520simulator%2520to%2520reload%250A%2520%2520%2520%2520%2520%2520your%2520app%25E2%2580%2599s%2520code.%250A%2520%2520%2520%2520%253C%252FText%253E%250A%2520%2520%2520%2520%253CText%2520style%253D%257Bheading%257D%253EDebug%253C%252FText%253E%250A%2520%2520%2520%2520%253CText%253E%250A%2520%2520%2520%2520%2520%2520Press%2520Cmd%2520%252B%2520M%2520or%2520Shake%2520your%2520device%2520to%2520open%2520the%250A%2520%2520%2520%2520%2520%2520React%2520Native%2520Debug%2520Menu.%250A%2520%2520%2520%2520%253C%252FText%253E%250A%2520%2520%2520%2520%253CText%2520style%253D%257Bheading%257D%253ELearn%253C%252FText%253E%250A%2520%2520%2520%2520%253CText%253E%250A%2520%2520%2520%2520%2520%2520Read%2520the%2520docs%2520to%2520discover%2520what%2520to%2520do%2520next%253A%250A%2520%2520%2520%2520%253C%252FText%253E%250A%2520%2520%2520%253C%252FView%253E%250A%29%253B%250A%2520%2520"
+                style="
+                  width: 450px;
+                  height: 801px;
+                  border: 0;
+                  transform: scale(1);
+                  overflow: hidden;
+                "
+                sandbox="allow-scripts allow-same-origin"
+              >
+              </iframe>
+              <!-- <iframe
                 src="https://carbon.now.sh/embed?bg=rgba%28171%2C+184%2C+195%2C+1%29&t=one-dark&wt=sharp&l=javascript&width=680&ds=false&dsyoff=0px&dsblur=0px&wc=true&wa=true&pv=0px&ph=0px&ln=false&fl=1&fm=Hack&fs=10px&lh=183%25&si=false&es=2x&wm=false&code=import%2520React%2520from%2520%27react%27%250Aimport%2520%257B%2520Text%252C%2520View%2520%257D%2520from%2520%27react-native%27%250Aimport%2520%257B%2520Header%2520%257D%2520from%2520%27.%252FHeader%27%250Aimport%2520%257B%2520heading%2520%257D%2520from%2520%27.%252FTypography%27%250A%250Aconst%2520WelcomeScreen%2520%253D%2520%28%29%2520%253D%253E%2520%28%250A%2520%2520%253CView%253E%250A%2520%2520%2520%2520%253CHeader%2520title%253D%2522Welcome%2520to%2520React%2520Native%2522%2520%252F%253E%250A%2520%2520%2520%2520%253CText%2520style%253D%257Bheading%257D%253EStep%2520One%253C%252FText%253E%250A%2520%2520%2520%2520%253CText%253EEdit%2520App.js%2520to%2520change%2520this%2520screen%2520and%2520turn%2520it%2520into%2520your%2520app.%253C%252FText%253E%250A%2520%2520%2520%2520%253CText%2520style%253D%257Bheading%257D%253ESee%2520Your%2520Changes%253C%252FText%253E%250A%2520%2520%2520%2520%253CText%253EPress%2520Cmd%2520%252B%2520R%2520inside%2520the%2520simulator%2520to%2520reload%2520your%2520app%25E2%2580%2599s%2520code.%253C%252FText%253E%250A%2520%2520%2520%2520%253CText%2520style%253D%257Bheading%257D%253EDebug%253C%252FText%253E%250A%2520%2520%2520%2520%253CText%253E%250A%2520%2520%2520%2520%2520%2520Press%2520Cmd%2520%252B%2520M%2520or%2520Shake%2520your%2520device%2520to%2520open%2520the%2520React%2520Native%2520Debug%2520Menu.%250A%2520%2520%2520%2520%253C%252FText%253E%250A%2520%2520%2520%2520%253CText%2520style%253D%257Bheading%257D%253ELearn%253C%252FText%253E%250A%2520%2520%2520%2520%253CText%253ERead%2520the%2520docs%2520to%2520discover%2520what%2520to%2520do%2520next%253A%253C%252FText%253E%250A%2520%2520%253C%252FView%253E%250A%29%250A"
                 style="
                   width: 490px;
@@ -332,7 +344,7 @@
                 "
                 sandbox="allow-scripts allow-same-origin"
               >
-              </iframe>
+              </iframe> -->
             </div>
           </div>
         </section>
@@ -432,7 +444,10 @@
                 class="twitter-btn"
                 target="_blank"
               >
-                <img src="./assets/Images/twitter-xxl.png" alt="twitter-image" />
+                <img
+                  src="./assets/Images/twitter-xxl.png"
+                  alt="twitter-image"
+                />
                 Follow @reactnative</a
               >
               <!-- <a
@@ -617,10 +632,16 @@
                     />
                   </li>
                   <li class="item">
-                    <img src="./assets/Images/mercari.png" alt="mercari-image" />
+                    <img
+                      src="./assets/Images/mercari.png"
+                      alt="mercari-image"
+                    />
                   </li>
                   <li class="item">
-                    <img src="./assets/Images/discord.png" alt="discord-image" />
+                    <img
+                      src="./assets/Images/discord.png"
+                      alt="discord-image"
+                    />
                   </li>
                   <li class="item">
                     <img

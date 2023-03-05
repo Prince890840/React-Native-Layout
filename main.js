@@ -12,6 +12,8 @@ const announcementBar = document.querySelector(".announcementBar");
 const navbar = document.querySelector(".navbar");
 const smallScreenNavbar = document.querySelector(".mobile-nav");
 
+const body = document.querySelector("body");
+
 window.addEventListener("scroll", () => {
   if (window.scrollY > announcementBar.offsetHeight) {
     navbar.classList.add("fixed");
@@ -41,3 +43,17 @@ selectWrapper.addEventListener("focusout", () => {
   select.style.opacity = "0";
   selectSpan.textContent = select.value;
 });
+
+function toggleMenu() {
+  menuIcon.classList.toggle("open");
+  body.classList.toggle("no-scroll");
+}
+
+menuIcon.addEventListener("click", toggleMenu);
+
+function closeMenu() {
+  menuIcon.classList.remove("open");
+  body.classList.remove("no-scroll");
+}
+
+closeIcon.addEventListener("click", closeMenu);
