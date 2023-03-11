@@ -1152,10 +1152,10 @@ footer .footer__bottom img:hover {
     width: 18rem;
     height: 100%;
     top: 0;
-    left: 100%;
+    left: -18rem;
     display: inline-block;
     z-index: 9999;
-    transition: all 400ms ease;
+    transition: all 600ms ease;
     background-color: #fff;
   }
 
@@ -1561,10 +1561,10 @@ footer .footer__bottom img:hover {
     width: 22rem;
     height: 100%;
     top: 0;
-    left: 100%;
+    left: -23rem;
     display: inline-block;
     z-index: 9999;
-    transition: all 400ms ease;
+    transition: all 600ms ease;
     background-color: #fff;
   }
 
